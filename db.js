@@ -1,8 +1,6 @@
 const mongoose = require("mongoose")
 let creds = {user:'',host:'',pass:'',github:''}
-try {
-    creds = require('./cred.json')
-}catch(e){}
+
 username = process.env.DBUSER || creds.user
 host = process.env.DBHOST || creds.host
 password = process.env.DBPASS || creds.pass
